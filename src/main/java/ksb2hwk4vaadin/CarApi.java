@@ -29,7 +29,7 @@ public class CarApi {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Car> getCarById(@PathVariable long id) {
+    public ResponseEntity<Car> getCarById(@PathVariable String id) {
         Optional<Car> first = carService.getCarById(id);
         if (first.isPresent()) {
             return new ResponseEntity<>(first.get(), HttpStatus.OK);
@@ -77,7 +77,7 @@ public class CarApi {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteCar(@PathVariable long id) {
+    public ResponseEntity deleteCar(@PathVariable String id) {
         boolean isDeleted = carService.deleteCar(id);
         if (isDeleted) {
             return new ResponseEntity("It was deleted.", HttpStatus.OK);

@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 
-class Ksb2Application {
-
+//class Ksb2Application {
+class DemoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Ksb2Application.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
 

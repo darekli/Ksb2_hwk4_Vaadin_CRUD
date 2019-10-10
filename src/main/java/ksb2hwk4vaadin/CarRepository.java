@@ -8,16 +8,16 @@ import java.util.List;
 @Repository
 public class CarRepository {
 
-    private CarComponent carComponent;
+    private CarManager carManager;
 
     private List<Car> carList;
 
     @Autowired
-    public CarRepository(CarComponent carComponent) {
-        this.carComponent = carComponent;
+    public CarRepository(CarManager carManager) {
+        this.carManager = carManager;
     }
 
     public List<Car> getCarList() {
-        return carList = carComponent.getCarList();
+        return carList = carManager.getCarList();
     }
 }

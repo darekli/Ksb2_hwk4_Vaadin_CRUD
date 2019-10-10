@@ -22,7 +22,7 @@ public class CarService {
         return carList;
     }
 
-    public Optional<Car> getCarById(long id) {
+    public Optional<Car> getCarById(String id) {
         List<Car> carList = getCars();
         Optional<Car> first = carList.stream().filter(car -> car.getId() == id).findFirst();
         return first;
@@ -65,7 +65,7 @@ public class CarService {
         return false;
     }
 
-    public boolean deleteCar(long id) {
+    public boolean deleteCar(String id) {
         Optional<Car> first = getCarById(id);
         if (first.isPresent()) {
             boolean isDeleted = getCars().remove(first.get());

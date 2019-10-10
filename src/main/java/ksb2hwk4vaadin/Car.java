@@ -3,12 +3,12 @@ package ksb2hwk4vaadin;
 
 public class Car {
 
-    private long id;
+    private String id;
     private String mark;
     private String model;
     private String color;
 
-    public Car(long id, String mark, String model, String color) {
+    public Car(String id, String mark, String model, String color) {
         this.id = id;
         this.mark = mark;
         this.model = model;
@@ -19,11 +19,11 @@ public class Car {
     public Car() {
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
