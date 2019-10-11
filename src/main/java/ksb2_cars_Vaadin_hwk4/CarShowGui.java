@@ -1,14 +1,16 @@
-package ksb2hwk4vaadin;
+package ksb2_cars_Vaadin_hwk4;
+
 
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Route("show-car")
+@Route ("show-car")
 public class CarShowGui extends VerticalLayout {
 
     private CarManager carManager;
+
 
     @Autowired
     public CarShowGui(CarManager carManager) {
@@ -19,5 +21,5 @@ public class CarShowGui extends VerticalLayout {
 
         add(grid);
     }
-}
 
+}
