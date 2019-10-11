@@ -26,23 +26,22 @@ public class CarAdderGui extends VerticalLayout {
         buttonAdd.addClickListener(clickEvent -> {
             Car car = new Car(textFieldId.getValue(), textFieldMark.getValue(), textFieldModel.getValue(), textFieldColor.getValue());
             carManager.addCar(car);
-
             carManager.getCarList().forEach(System.out::println);
         });
 //remove car
+        TextField textFieldByIdToRemove = new TextField("Car by Id to remove");
         Button buttonRemove = new Button("Remove car");
 
-        buttonAdd.addClickListener(clickEvent -> {
-            Car car = new Car(textFieldId.getValue(), textFieldMark.getValue(), textFieldModel.getValue(), textFieldColor.getValue());
-            carManager.removeCar(car);
-
+        buttonRemove.addClickListener(clickEvent -> {
+            Car car = new Car(textFieldId.getValue());
+            carManager.deleteCar(car);
             carManager.getCarList().forEach(System.out::println);
-
+//todo not working yet
         });
 
 
 
-        add(textFieldId, textFieldMark, textFieldModel, textFieldColor, buttonAdd, buttonRemove);
+        add(textFieldId, textFieldMark, textFieldModel, textFieldColor, buttonAdd,textFieldByIdToRemove, buttonRemove);
         Grid<Car> grid = new Grid<>(Car.class);
         grid.setItems(carManager.getCarList());
 

@@ -35,5 +35,9 @@ public class CarManager {
     public void removeCar(Car car) {
         carList.remove(car);   //usuwanie elementów
     }
+//**************
+    public void deleteCar(Car id) {
+        carList.remove(id);
+    }
 
 }
