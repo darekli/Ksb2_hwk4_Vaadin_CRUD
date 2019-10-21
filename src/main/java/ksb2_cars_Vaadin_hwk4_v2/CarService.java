@@ -2,7 +2,6 @@ package ksb2_cars_Vaadin_hwk4_v2;
 
 import org.springframework.stereotype.Service;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

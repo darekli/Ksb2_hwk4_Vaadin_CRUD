@@ -28,9 +28,9 @@ public class HomeViewGui extends Composite<VerticalLayout> implements HasCompone
         Image image = new Image("https://gazeo.pl/images/gazeo_2018/Wiadomosci/Nowe_samochody_LPG_teoretyczna_alternatywa/Samochody-LPG-2017.jpg", "DummyImage");
         Button buttonDarkMode = new Button("Dark mode", click -> {
             ThemeList themeList = UI.getCurrent().getElement().getThemeList();
-            if(themeList.contains(Lumo.DARK)) {
+            if (themeList.contains(Lumo.DARK)) {
                 themeList.remove(Lumo.DARK);
-            }else {
+            } else {
                 themeList.add(Lumo.DARK);
             }
         });
@@ -39,7 +39,7 @@ public class HomeViewGui extends Composite<VerticalLayout> implements HasCompone
         com.vaadin.flow.component.html.H2 pageName = new H2("Home menu");
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, pageName);
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, image);
-        add(buttonDarkMode,pageName,image);
+        add(buttonDarkMode, pageName, image);
     }
 
 
