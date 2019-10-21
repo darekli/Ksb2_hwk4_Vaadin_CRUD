@@ -1,3 +1,2 @@
 # Ksb2_hwk4_Vaadin
-![]file:///Users/darekli/Desktop/Zrzut%20ekranu%202019-10-21%20o%2014.03.04.png
-
+![Zrzut ekranu 2019-10-21 o 14 03 04](https://user-images.githubusercontent.com/34181847/67205153-63f1f980-f40f-11e9-9e98-aac3f88108da.png)
