@@ -8,6 +8,7 @@ import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.dom.ThemeList;
 import com.vaadin.flow.router.PageTitle;
@@ -32,13 +33,14 @@ public class HomeViewGui extends Composite<VerticalLayout> implements HasCompone
             }else {
                 themeList.add(Lumo.DARK);
             }
-
         });
+
         getContent().setSizeFull();
         com.vaadin.flow.component.html.H2 pageName = new H2("Home menu");
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, pageName);
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, image);
         add(buttonDarkMode,pageName,image);
     }
+
 
 }

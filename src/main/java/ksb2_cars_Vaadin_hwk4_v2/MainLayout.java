@@ -11,7 +11,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.server.VaadinSession;
-import ksb2_cars_Vaadin_hwk4.CarShowGui;
+
 import org.springframework.stereotype.Component;
 
 import static com.vaadin.flow.component.Tag.H2;
@@ -46,13 +46,12 @@ public class MainLayout extends Composite<VerticalLayout> implements HasComponen
         add(mainContent);
 
         H1 footer = new H1("_______________________________________________________________________________________________________________");
-       // com.vaadin.flow.component.html.H2 pageName = new H2 ("CARS MENmU");
+
         add(footer);
 
         getContent().setFlexGrow(1, mainContent);
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, header);
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, footer);
-       // getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.CENTER, pageName);
         getContent().setHorizontalComponentAlignment(FlexComponent.Alignment.STRETCH, mainContent);
     }
 
