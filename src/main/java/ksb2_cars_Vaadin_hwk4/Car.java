@@ -1,12 +1,22 @@
 package ksb2_cars_Vaadin_hwk4;
 
 public class Car {
-    private String id;
+    private long id;
     private String mark;
     private String model;
     private String color;
 
-    public Car(String id, String mark, String model, String color) {
+
+    public Car() {
+    }
+    public void setIdOfCar(long id) {
+        this.id = id;
+    }
+    public long getIdOfCar() {
+        return id;
+    }
+
+    public Car(long id, String mark, String model, String color) {
         this.id = id;
         this.mark = mark;
         this.model = model;
@@ -14,16 +24,13 @@ public class Car {
 
     }
 
-    public Car(String id) {
-        this.id = id;
-    }
 
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -50,6 +57,7 @@ public class Car {
     public void setColor(String color) {
         this.color = color;
     }
+
 
     @Override
     public String toString() {

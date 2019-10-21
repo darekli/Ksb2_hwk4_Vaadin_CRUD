@@ -7,19 +7,19 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route ("show-car")
-public class CarShowGui extends VerticalLayout {
+public class CarShowGui extends VerticalLayout implements buttonReturn {
 
-    private CarManager carManager;
+    private CarService carService;
 
 
     @Autowired
-    public CarShowGui(CarManager carManager) {
-        this.carManager = carManager;
+    public CarShowGui(CarService carService) {
+        this.carService = carService;
 
         Grid<Car> grid = new Grid<>(Car.class);
-        grid.setItems(carManager.getCarList());
+        grid.setItems(carService.getCarList());
 
-        add(grid);
+        add(grid,addButtonReturn());
     }
 
 }
